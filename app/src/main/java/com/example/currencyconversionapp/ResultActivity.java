@@ -15,7 +15,8 @@ public class ResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String usD = intent.getStringExtra("us");
         String auD = intent.getStringExtra("au");
-        String text = usD + "\n" + auD;
+        String euD = intent.getStringExtra("eu");
+        String text = usD + "\n" + auD + "\nEuros: "+euD;
 
         tv.setText(text);
     }

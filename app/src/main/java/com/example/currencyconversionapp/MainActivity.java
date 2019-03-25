@@ -19,13 +19,17 @@ public class MainActivity extends AppCompatActivity {
         EditText et = findViewById(R.id.et_amount);
         Double usd_amount = Double.parseDouble(et.getText().toString());
 
-        Double aussieD = CurrencyConverter.usdToAus(usd_amount);
+        double aussieD = CurrencyConverter.usdToAus(usd_amount);
+        double euro = CurrencyConverter.usToEuro(usd_amount);
+
 
         String showUSD = "US Dollars: "+ usd_amount;
         String showAUD = "Australian Dollars: "+ aussieD;
+        String showEuro = "Euros: "+ euro;
 
         intent.putExtra("us", showUSD);
         intent.putExtra("au",showAUD);
+        intent.putExtra("eu",showEuro);
 
         startActivity(intent);
     }
